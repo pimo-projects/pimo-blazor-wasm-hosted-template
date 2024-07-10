@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Provincial Government of Agusan del Sur",
+    "classifications": ["Blazor", "WebAssembly", "C#"],
+    "identity": "PIMO.Projects.BlazorWasmHosted",
+    "name": "PIMO Projects BlazorWASM Hosted Project Template",
+    "groupIdentity": "PIMO.Projects",
+    "shortName": "pimo-blazorwasm-hosted",
+    "sourceName": "PimoBlazorWasmHostedTemplate",
+    "preferNameDirectory": true,
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "symbols": {
+        "UseControllers": {
+            "type": "parameter",
+            "description": "Use controllers instead of minimal APIs",
+            "datatype": "bool",
+            "defaultValue": "false"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [
+                        "**/[Bb]in/**",
+                        "**/[Oo]bj/**",
+                        ".template.config/**/*",
+                        "**/*.filelist",
+                        "**/*.user",
+                        "**/*.lock.json",
+                        ".git/**",
+                        "nuget.csproj",
+                        "LICENSE",
+                        "README.md"
+                    ]
+                },
+                {
+                    "condition": "(!UseControllers)",
+                    "exclude": [
+                        "src/Server/Controllers/WeatherForecastController.cs"
+                    ]
+                }
+            ]
+        }
+    ]
+}

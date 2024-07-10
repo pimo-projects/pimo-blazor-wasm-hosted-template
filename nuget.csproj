@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>.</PackageOutputPath>  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <Version>0.0.1</Version>
+    <PackageId>PIMO.Projects.BlazorWasmHosted</PackageId>
+    <Title>PIMO Projects BlazorWASM Hosted Project Template</Title>
+    <Company>Provincial Government of Agusan del Sur</Company>
+    <Authors>PIMO</Authors>
+    <Copyright>Provincial Government of Agusan del Sur © 2024</Copyright>
+    <Description>Blazor Web Assembly Hosted Project Template</Description>
+    <PackageTags>C#;Blazor;WebAssembly</PackageTags>
+    <PackageCopyright>2024 Provincial Government of Agusan del Sur</PackageCopyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/pimo-projects/pimo-blazor-wasm-hosted-template</RepositoryUrl>
+  </PropertyGroup>
+</Project>
